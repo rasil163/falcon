@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISIONORA | Farnsworth-Munsell Test</title>
+
+<link rel="stylesheet" href="farnsworth.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+ <span>FALCON</span>👁️ 
+</div>
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="ishihara.html">Ishihara</a></li>
+
+<li><a href="anomaloscope.html">Anomaloscope</a></li>
+
+<li><a href="farnsworth.html" class="active">Farnsworth</a></li>
+
+</ul>
+
+<a href="index.html" class="back-btn">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+AI Enhanced Farnsworth–Munsell Test
+
+</h1>
+
+<p>
+
+Drag and arrange the colour caps from left to right in the correct colour sequence.
+
+</p>
+
+</section>
+
+<section class="glass-card">
+
+<div class="top-bar">
+
+<div>
+
+<h3>Time</h3>
+
+<h2 id="timer">00:00</h2>
+
+</div>
+
+<div>
+
+<h3>Caps Correct</h3>
+
+<h2 id="correctCount">0 / 16</h2>
+
+</div>
+
+<div>
+
+<h3>Status</h3>
+
+<h2 id="status">Testing...</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="glass-card">
+
+<h2 class="title">
+
+Arrange the Colour Caps
+
+</h2>
+
+<p class="instruction">
+
+Drag each colour into the correct order.
+
+</p>
+
+<div id="capsContainer" class="caps-container">
+
+<div class="cap" draggable="true" data-order="1" style="background:#ff0000;"></div>
+
+<div class="cap" draggable="true" data-order="2" style="background:#ff6600;"></div>
+
+<div class="cap" draggable="true" data-order="3" style="background:#ffaa00;"></div>
+
+<div class="cap" draggable="true" data-order="4" style="background:#ffee00;"></div>
+
+<div class="cap" draggable="true" data-order="5" style="background:#99ff00;"></div>
+
+<div class="cap" draggable="true" data-order="6" style="background:#00ff00;"></div>
+
+<div class="cap" draggable="true" data-order="7" style="background:#00ff88;"></div>
+
+<div class="cap" draggable="true" data-order="8" style="background:#00ffff;"></div>
+
+<div class="cap" draggable="true" data-order="9" style="background:#00aaff;"></div>
+
+<div class="cap" draggable="true" data-order="10" style="background:#0066ff;"></div>
+
+<div class="cap" draggable="true" data-order="11" style="background:#0000ff;"></div>
+
+<div class="cap" draggable="true" data-order="12" style="background:#6600ff;"></div>
+
+<div class="cap" draggable="true" data-order="13" style="background:#9900ff;"></div>
+
+<div class="cap" draggable="true" data-order="14" style="background:#cc00ff;"></div>
+
+<div class="cap" draggable="true" data-order="15" style="background:#ff00aa;"></div>
+
+<div class="cap" draggable="true" data-order="16" style="background:#ff0055;"></div>
+
+</div>
+
+<div class="button-group">
+
+<button id="shuffleBtn">
+
+<i class="fa-solid fa-shuffle"></i>
+
+Shuffle
+
+</button>
+
+<button id="submitBtn">
+
+<i class="fa-solid fa-check"></i>
+
+Submit Test
+
+</button>
+
+<button id="restartBtn">
+
+<i class="fa-solid fa-rotate-right"></i>
+
+Restart
+
+</button>
+
+</div>
+
+</section>
+
+<section id="resultSection" class="result-section">
+
+<div class="glass-card">
+
+<h1>
+
+Test Completed
+
+</h1>
+
+<div class="result-circle">
+
+<span id="score">0</span>%
+
+</div>
+
+<h2 id="visionResult">
+
+Normal Colour Vision
+
+</h2>
+
+<p id="analysis">
+
+Excellent colour discrimination detected.
+
+</p>
+
+<div class="button-group">
+
+<button onclick="restartTest()">
+
+Take Again
+
+</button>
+
+<button onclick="window.print()">
+
+Download Report
+
+</button>
+
+<a href="index.html">
+
+<button>
+
+Back Home
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="farnsworth.js"></script>
+
+</body>
+
+</html>

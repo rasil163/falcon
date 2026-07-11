@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISIONORA | AI Anomaloscope Test</title>
+
+<link rel="stylesheet" href="anomaloscope.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+ <span>FALCON</span>👁️ 
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="ishihara.html">Ishihara</a></li>
+<li><a href="anomaloscope.html" class="active">Anomaloscope</a></li>
+<li><a href="farnsworth.html">Farnsworth</a></li>
+</ul>
+
+<a href="index.html" class="back-btn">
+<i class="fa-solid fa-house"></i> Home
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>AI Enhanced Anomaloscope Test</h1>
+
+<p>
+Adjust the Red-Green mixture until it matches the Yellow reference.
+This simulates the Rayleigh Match used for colour vision assessment.
+</p>
+
+</section>
+
+<section class="test-area">
+
+<div class="glass-card">
+
+<h2>Reference Colour</h2>
+
+<div class="color-box" id="referenceColor"></div>
+
+<p class="label">
+Reference Yellow
+</p>
+
+</div>
+
+<div class="glass-card">
+
+<h2>Adjust Colour</h2>
+
+<div class="color-box" id="mixColor"></div>
+
+<div class="slider-box">
+
+<label>
+🔴 Red
+<span id="redValue">128</span>
+</label>
+
+<input
+type="range"
+id="redSlider"
+min="0"
+max="255"
+value="128">
+
+</div>
+
+<div class="slider-box">
+
+<label>
+🟢 Green
+<span id="greenValue">128</span>
+</label>
+
+<input
+type="range"
+id="greenSlider"
+min="0"
+max="255"
+value="128">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="analysis">
+
+<div class="glass-card">
+
+<h2>
+🤖 AI Analysis
+</h2>
+
+<p id="analysisText">
+
+Move the sliders until both colours appear identical.
+
+</p>
+
+<div class="score-area">
+
+<h3>
+
+Similarity Score
+
+</h3>
+
+<h1 id="score">
+
+0%
+
+</h1>
+
+</div>
+
+<div class="buttons">
+
+<button id="checkBtn">
+
+Check Match
+
+</button>
+
+<button id="resetBtn">
+
+Reset
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="resultSection" class="result-section">
+
+<div class="glass-card">
+
+<h1>
+
+Test Result
+
+</h1>
+
+<div class="result-circle">
+
+<span id="finalPercent">
+
+0%
+
+</span>
+
+</div>
+
+<h2 id="visionType">
+
+Normal Colour Vision
+
+</h2>
+
+<p id="resultText">
+
+Excellent colour matching ability detected.
+
+</p>
+
+<div class="buttons">
+
+<button onclick="restartTest()">
+
+Take Test Again
+
+</button>
+
+<button onclick="window.print()">
+
+Download Report
+
+</button>
+
+<a href="index.html">
+
+<button>
+
+Back Home
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="anomaloscope.js"></script>
+
+</body>
+</html>

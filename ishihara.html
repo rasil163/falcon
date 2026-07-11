@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VISIONORA | Ishihara Color Blindness Test</title>
+
+<link rel="stylesheet" href="ishihara.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+ <span>FALCON</span>👁️ 
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="#">Ishihara Test</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<div class="theme-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>
+
+AI Enhanced Ishihara Test
+
+</h1>
+
+<p>
+
+Detect red-green colour blindness using intelligent image analysis.
+
+</p>
+
+</section>
+
+<section class="test-container">
+
+<div class="glass-card">
+
+<div class="progress-area">
+
+<div class="progress-text">
+
+Plate
+
+<span id="plateNo">
+
+1
+
+</span>
+
+/
+
+10
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" id="progressBar"></div>
+
+</div>
+
+</div>
+
+<div class="plate-area">
+
+<img
+
+id="plateImage"
+
+src="plates/plate1.png"
+
+alt="Ishihara Plate"
+
+>
+
+</div>
+
+<div class="question">
+
+<h2>
+
+What number do you see?
+
+</h2>
+
+<input
+
+type="text"
+
+id="answer"
+
+placeholder="Enter the number"
+
+autocomplete="off"
+
+>
+
+</div>
+
+<div class="buttons">
+
+<button id="prevBtn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Previous
+
+</button>
+
+<button id="nextBtn">
+
+Next
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+</div>
+
+<div class="ai-card">
+
+<h2>
+
+🤖 AI Analysis
+
+</h2>
+
+<div class="scanner">
+
+<div class="scan-line"></div>
+
+</div>
+
+<p id="analysisText">
+
+AI is waiting for your response...
+
+</p>
+
+<div class="score-box">
+
+<h3>
+
+Current Score
+
+</h3>
+
+<h1 id="score">
+
+0
+
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="result-section" id="resultSection">
+
+<div class="result-card">
+
+<h1>
+
+Test Completed
+
+</h1>
+
+<div class="result-circle">
+
+<span id="finalScore">
+
+0
+
+</span>
+
+/10
+
+</div>
+
+<h2 id="resultTitle">
+
+Normal Vision
+
+</h2>
+
+<p id="resultDescription">
+
+Excellent colour vision detected.
+
+</p>
+
+<button onclick="restartTest()">
+
+Take Test Again
+
+</button>
+
+<button onclick="downloadPDF()">
+
+Download Report
+
+</button>
+
+<a href="index.html">
+
+<button>
+
+Back to Home
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<script src="ishihara.js"></script>
+
+</body>
+
+</html>
